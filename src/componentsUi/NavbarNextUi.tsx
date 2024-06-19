@@ -33,7 +33,7 @@ export default function App() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -41,16 +41,18 @@ export default function App() {
         />
         <NavbarBrand>
           <AcmeLogo />
-          <Link className="pe-5" href="/">
+          <Link className="pe-5 text-black dark:text-white" href="/">
             Frontend
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden gap-4 lg:flex" justify="end">
         <NavbarItem>
           <Link
             className={`  pe-5 ${
-              pathname === "/" ? "text-red-500 font-bold" : ""
+              pathname === "/"
+                ? "font-bold text-red-500"
+                : "text-black dark:text-white"
             }`}
             href="/"
           >
@@ -60,42 +62,26 @@ export default function App() {
         <NavbarItem>
           <Link
             className={`  pe-5 ${
-              pathname === "/Work" ? "text-red-500 font-bold" : ""
+              pathname === "/useComponents"
+                ? "font-bold text-red-500"
+                : "text-black dark:text-white"
             }`}
-            href="/Work"
+            href="/useComponents"
           >
-            Work
+            useComponents
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className={`  pe-5 ps-5 ${
-              pathname === "/TailwindL" ? "text-red-500 font-bold" : ""
+            className={`  pe-5 ${
+              pathname === "/Practice"
+                ? "font-bold text-red-500"
+                : "text-black dark:text-white"
             }`}
-            href="/TailwindL"
+            href="/Practice"
           >
-            TailwindL
+            Practice
           </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={`  pe-5 ps-5 ${
-              pathname === "/RoutLink" ? "text-red-500 font-bold" : ""
-            }`}
-            href="/RoutLink"
-          >
-            RoutLink
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
@@ -106,8 +92,8 @@ export default function App() {
                 index === 2
                   ? "primary"
                   : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
+                    ? "danger"
+                    : "foreground"
               }
               className="w-full"
               href="#"
