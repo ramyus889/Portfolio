@@ -19,7 +19,7 @@ export default function MPage() {
     },
     {
       id: 3,
-      imag: "/img/WebDev.svg",
+      imag: "/img/webDev.svg",
       name: "Web Development",
     },
   ];
