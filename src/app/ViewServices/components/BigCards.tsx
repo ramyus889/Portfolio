@@ -109,7 +109,8 @@ export default function MPage() {
             <div className="text-[#999987]">{item.text}</div>
             <Button
               as={Link}
-              href="#"
+              href="https://cal.com/"
+              target="_blank"
               size="lg"
               className="w-full bg-[#191919]  text-[18px] text-[#cccccc]"
               startContent={
