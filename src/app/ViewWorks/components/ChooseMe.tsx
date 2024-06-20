@@ -3,50 +3,61 @@
 import Image from "next/image";
 import { Link } from "@nextui-org/link";
 import Marquee from "react-fast-marquee";
-const Work = "/img/Services.svg";
+const Work = "/img/Why.svg";
 
 export default function MPage() {
   const marq = [
     {
       id: 1,
-      imag: "/img/WebDesign.svg",
-      name: "Web Design",
+      imag: "/img/Attention.svg",
+      name: "Attention to Detail",
     },
     {
       id: 2,
-      imag: "/img/mobileApp.svg",
-      name: "Mobile App Design",
+      imag: "/img/Solver.svg",
+      name: "Problem Solver",
     },
     {
       id: 3,
-      imag: "/img/webDev.svg",
-      name: "Web Development",
+      imag: "/img/Team.svg",
+      name: "Team Player",
+    },
+    {
+      id: 4,
+      imag: "/img/Communicator.svg",
+      name: "Good Communicator",
     },
   ];
   const marq2 = [
     {
       id: 1,
-      imag: "/img/Framer.svg",
-      name: "Framer Development",
+      imag: "/img/Learner.svg",
+      name: "Continuous Learner",
     },
     {
       id: 2,
-      imag: "/img/Webflow.svg",
-      name: "Webflow Development",
+      imag: "/img/Thinker.svg",
+      name: "Critical Thinker",
     },
     {
       id: 3,
-      imag: "/img/WebDesign.svg",
-      name: "SEO Optimization",
+      imag: "/img/Attitude.svg",
+      name: "Positive Attitude ",
+    },
+    {
+      id: 4,
+      imag: "/img/Mind.svg",
+      name: "Creative Mind",
     },
   ];
   return (
-    <div className="rounded-xl bg-[#101010]   pt-[20px]">
+    <div className="w-[364px] rounded-xl   bg-[#101010] pt-[20px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
-        <div className="text-[#999987]">Services</div>
+        <div className="text-[#999987]">Why Me</div>
       </div>
-      <div className="text-center text-[20px]">Solutions Suite</div>
+      <div className="text-center text-[20px]">Why to Choose Me?</div>
+      <div className="my-3 border border-[#212121]"></div>
       <div className="mt-[20px] flex flex-col gap-5">
         <Marquee
           speed={30}
@@ -99,15 +110,6 @@ export default function MPage() {
             </div>
           ))}
         </Marquee>
-        <div className="flex place-content-center">
-          <Link
-            showAnchorIcon
-            href={"/ViewServices"}
-            className=" pb-[12px]  text-[#A18FFB]"
-          >
-            View All Services
-          </Link>
-        </div>
       </div>
     </div>
   );

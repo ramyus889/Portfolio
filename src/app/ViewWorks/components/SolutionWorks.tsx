@@ -41,7 +41,7 @@ export default function MPage() {
     },
   ];
   return (
-    <div className="rounded-xl bg-[#101010]   pt-[20px]">
+    <div className="w-[464px] rounded-xl   bg-[#101010] pt-[20px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Services</div>
