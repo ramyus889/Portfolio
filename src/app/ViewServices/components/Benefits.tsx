@@ -13,25 +13,25 @@ const Sun = "/img/Sun.svg";
 export default function MPage() {
   const [image] = useState([
     {
-      img: "/img/target.svg",
+      img: "/img/speed.svg",
       name: "Speed Delivery",
       mainText: "Speed Delivery",
       text: "Swift delivery of high-quality services to meet your project timelines.",
     },
     {
-      img: "/img/Research.svg",
+      img: "/img/quick.svg",
       name: "Quick Turnaround",
       mainText: "Quick Turnaround",
       text: "Quick turnaround times ensuring your projects are completed efficiently and effectively.",
     },
     {
-      img: "/img/Wireframe.svg",
+      img: "/img/success.svg",
       name: "Success Tracking",
       mainText: "Success Tracking",
       text: "Track the success of your projects with comprehensive analytics and reporting.",
     },
     {
-      img: "/img/Prototyping.svg",
+      img: "/img/unique.svg",
       name: "Unique Design",
       mainText: "Unique Design",
       text: "Stand out from the crowd with unique and captivating design solutions.",

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
 
-const call = "/img/Call.svg";
+const call = "/img/call.svg";
 const free = "/img/Freelance.svg";
 
 export default function MPage() {
