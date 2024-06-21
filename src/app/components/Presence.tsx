@@ -8,16 +8,19 @@ const Sun = "/img/Sun.svg";
 export default function MPage() {
   const [image] = useState([
     {
+      id: 1,
       img: "/img/Twitter2.svg",
       name: "@praha37v",
       href: " https://twitter.com/praha37v",
     },
     {
+      id: 2,
       img: "/img/Inst.svg",
       name: "@praha37v",
       href: "https://www.instagram.com/praha37v/",
     },
     {
+      id: 3,
       img: "/img/In.svg",
       name: "@praha37v",
       href: "https://www.linkedin.com/in/praha37v/",
@@ -33,7 +36,7 @@ export default function MPage() {
       <div className="mt-[47px] flex flex-col gap-5">
         {image.map((item) => (
           <Link
-            key={item.name}
+            key={item.id}
             href={item.href}
             target="_blank"
             className="flex items-center justify-between gap-8 rounded-xl bg-[#191919] px-[8px] py-[8px] "
