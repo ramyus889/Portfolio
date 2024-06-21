@@ -27,7 +27,7 @@ export default function MPage() {
       id: 3,
       imag: "/img/AvatarE.avif",
       name: "Emily Chen",
-      country: "Sydney, Australia.",
+      country: "Sydney.",
       year: "09, Feb 2024",
       text: "Pragadesh exceeded my expectations with his attention to detail and creativity. I'm thrilled with the website he built for my business.",
     },
@@ -53,9 +53,9 @@ export default function MPage() {
                     width={50}
                     height={50}
                   />
-                  <div className="flex flex-col">
-                    <div className="">{card.name}</div>
-                    <div className="text-[#999987]">{card.country}</div>
+                  <div className="flex flex-col ">
+                    <div className=" ">{card.name}</div>
+                    <div className=" text-[#999987] ">{card.country}</div>
                   </div>
                 </div>
                 <div className="text-[#999987]">{card.year}</div>

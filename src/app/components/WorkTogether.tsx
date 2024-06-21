@@ -10,7 +10,7 @@ const Call = "/img/call.svg";
 
 export default function MPage() {
   return (
-    <div className="rounded-xl bg-[#101010]  py-[42px]  max-[1919px]:w-[610px]">
+    <div className="mx-5 rounded-xl  bg-[#101010] py-[43px] sm:mx-0 xxl:py-[32px] ">
       <div className="flex flex-col place-content-center items-center gap-1">
         <Image
           src={Mainimg}

@@ -29,15 +29,19 @@ export default function Home() {
             </div>
           </div>
           <div className="flex  gap-5 max-[1419px]:flex-col">
-            <div className="flex flex-col gap-5 max-[1919px]:w-[610px] min-[1919px]:max-w-[450px]">
-              <Reviews />
-              <Presence />
+            <div className="w-full">
+              <div className="flex  max-w-[610px] flex-col gap-5 min-[1919px]:max-w-[450px]">
+                <Reviews />
+                <Presence />
+              </div>
             </div>
-            <div className="flex  flex-col gap-5 min-[1919px]:max-w-[450px]">
-              {/*
-              <WorkFlow />
-              <WorkTogether />
-               */}
+            <div className="w-full">
+              <div className="flex max-w-[610px] flex-col gap-5 min-[1919px]:max-w-[450px]">
+                <WorkFlow />
+                <WorkTogether />
+                {/*
+                 */}
+              </div>
             </div>
           </div>
         </div>
