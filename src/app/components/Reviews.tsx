@@ -34,7 +34,7 @@ export default function MPage() {
   ];
 
   return (
-    <div className="rounded-xl bg-[#101010]  px-[20px] py-[20px]">
+    <div className="mx-5 rounded-xl bg-[#101010] px-[20px] py-[20px]   sm:mx-0">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Rave} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Testimonials</div>
@@ -45,8 +45,8 @@ export default function MPage() {
         {marq.map((card) => (
           <div key={card.id} className="">
             <div className="w-full rounded-xl bg-[#191919] px-[20px] py-[20px]">
-              <div className="flex items-center justify-between gap-6">
-                <div className="flex gap-2">
+              <div className="flex flex-col items-center gap-6 min-[450px]:flex-row min-[450px]:justify-between">
+                <div className="flex flex-col items-center gap-2 min-[450px]:flex-row">
                   <Image
                     src={card.imag}
                     alt="tech-arsenal"

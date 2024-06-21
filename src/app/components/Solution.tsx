@@ -21,6 +21,7 @@ export default function MPage() {
       id: 3,
       imag: "/img/webDev.svg",
       name: "Web Development",
+      hidd: "hidden",
     },
   ];
   const marq2 = [
@@ -38,10 +39,11 @@ export default function MPage() {
       id: 3,
       imag: "/img/WebDesign.svg",
       name: "SEO Optimization",
+      hidd: "hidden",
     },
   ];
   return (
-    <div className="rounded-xl bg-[#101010]   pt-[20px]">
+    <div className="mx-5 rounded-xl   bg-[#101010] pt-[20px] sm:mx-0">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Services</div>

@@ -22,10 +22,12 @@ export default function MPage() {
     {
       id: 4,
       imag: "/img/Spotify.svg",
+      hidd: "hidden",
     },
     {
       id: 5,
       imag: "/img/TikTok.svg",
+      hidd: "hidden",
     },
   ];
   const marq2 = [
@@ -44,14 +46,16 @@ export default function MPage() {
     {
       id: 4,
       imag: "/img/Snapchat.svg",
+      hidd: "hidden",
     },
     {
       id: 5,
       imag: "/img/Libble.svg",
+      hidd: "hidden",
     },
   ];
   return (
-    <div className="rounded-xl bg-[#101010] pb-[32px]  pt-[20px]">
+    <div className="mx-5 rounded-xl bg-[#101010]  pb-[32px] pt-[20px]  sm:mx-0">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Clients</div>
@@ -66,7 +70,10 @@ export default function MPage() {
           gradientWidth={100}
         >
           {marq.map((item) => (
-            <div key={item.id} className="mx-1">
+            <div
+              key={item.id}
+              className={`mx-1 min-[500px]:block ${item.hidd} `}
+            >
               <div className="flex items-center  rounded-xl bg-[#191919] px-[20px] py-[8px] ">
                 <div className="">
                   <Image
@@ -88,7 +95,10 @@ export default function MPage() {
           gradientWidth={100}
         >
           {marq2.map((item) => (
-            <div key={item.id} className="mx-1">
+            <div
+              key={item.id}
+              className={`mx-1 min-[500px]:block ${item.hidd} `}
+            >
               <div className="flex items-center  rounded-xl bg-[#191919] px-[20px] py-[8px] ">
                 <div className="">
                   <Image
@@ -103,6 +113,17 @@ export default function MPage() {
             </div>
           ))}
         </Marquee>
+        <div className="block min-[600px]:hidden">
+          <div className="flex place-content-center">
+            <Link
+              showAnchorIcon
+              href={"/ViewServices"}
+              className=" pb-[12px]  text-[#A18FFB]"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

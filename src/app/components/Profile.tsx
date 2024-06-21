@@ -33,29 +33,31 @@ export default function MPage() {
     },
   ];
   return (
-    <div className="rounded-xl bg-[#101010] px-[20px] py-[30px]">
-      <div className="flex items-center gap-3">
+    <div className="mx-5 rounded-xl bg-[#101010] px-[20px] py-[30px] sm:mx-0">
+      <div className="flex flex-col items-center  gap-3 sm:flex-row">
         <Image
           src={front}
           alt="profile"
-          className="rounded-xl"
+          className="w-full rounded-xl sm:w-[130px]"
           width={130}
           height={140}
         />
         <div className="flex w-full flex-col gap-3">
           <div className="flex  items-center justify-between gap-3">
             <div className="flex items-center gap-2 rounded-xl border bg-[#191919] px-[20px] py-[6px]">
-              <span className="h-[8px]  w-[8px] rounded-full bg-[#6DD33D]"></span>
+              <span className="h-[8px] w-[8px] rounded-full bg-[#6DD33D]"></span>
               Available To Work
             </div>
-            <div className="flex items-center gap-3 text-[#cccccc]">
-              Resume{" "}
-              <Link
-                href="#"
-                className="cursor-pointer transition hover:-translate-y-1"
-              >
-                <BiDownload size={35} />
-              </Link>
+            <div className="hidden md:block">
+              <div className="flex items-center gap-3 text-[#cccccc]">
+                Resume{" "}
+                <Link
+                  href="#"
+                  className="cursor-pointer transition hover:-translate-y-1"
+                >
+                  <BiDownload size={35} />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="text-[28px]">Frontend Developer</div>
@@ -77,7 +79,7 @@ export default function MPage() {
           </Chip>
         ))}
       </div>
-      <div className="mt-3 flex place-content-center gap-3 ">
+      <div className="mt-3 flex flex-col place-content-center gap-3 sm:flex-row ">
         <Button
           as={Link}
           href="#"

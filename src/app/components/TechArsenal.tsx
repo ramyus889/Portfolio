@@ -29,13 +29,13 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="rounded-xl bg-[#101010] px-[30px] pb-[36px] pt-[20px]">
+    <div className="mx-5 rounded-xl bg-[#101010] px-[30px] pb-[36px] pt-[20px] sm:mx-0">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Tech} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Stacks</div>
       </div>
       <div className="text-center text-[20px]">Tech Arsenal</div>
-      <div className="mt-[20px] grid grid-cols-2 gap-2">
+      <div className="mt-[20px] grid grid-cols-1 gap-2 min-[400px]:grid-cols-2">
         {image.map((item) => (
           <Link
             key={item.name}
@@ -55,7 +55,7 @@ export default function MPage() {
               </div>
               <div className="text-[#cccccc]">{item.name}</div>
             </div>
-            <div className="text-[#999987] opacity-0 transition-transform  duration-400 ">
+            <div className="hidden text-[#999987] opacity-0 transition-transform duration-400 min-[500px]:block ">
               →
             </div>
           </Link>

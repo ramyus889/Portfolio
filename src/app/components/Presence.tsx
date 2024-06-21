@@ -27,7 +27,7 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="rounded-xl bg-[#101010]  px-[20px] py-[20px]">
+    <div className="mx-5 rounded-xl bg-[#101010] px-[20px]  py-[20px]  sm:mx-0">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Sun} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Follow Me</div>
