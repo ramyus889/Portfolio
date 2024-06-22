@@ -9,17 +9,19 @@ import Benefits from "./components/Benefits";
 
 export default function Home() {
   return (
-    <div className="  my-[30px] ">
+    <div className="my-[30px]  ">
       <div className="flex place-content-center">
-        <div className="flex  gap-5">
-          <div className="flex w-[450px]  flex-col gap-5">
-            <ViewStatistic />
-            <ViewAboutMe />
-            <ViewGallery />
-          </div>
-          <div className="flex flex-col gap-5">
-            <BigCards />
-            <ThreeCards />
+        <div className="flex flex-col gap-5 xxl:flex-row">
+          <div className="flex flex-col-reverse gap-5 xxl:flex-row">
+            <div className="flex max-w-[1076px] flex-col  gap-5 xxl:max-w-[450px]">
+              <ViewStatistic />
+              <ViewAboutMe />
+              <ViewGallery />
+            </div>
+            <div className="flex max-w-[1076px] flex-col gap-5 xxl:max-w-[1150px]">
+              <BigCards />
+              <ThreeCards />
+            </div>
           </div>
           <div className="flex flex-col gap-5">
             <MinCards />

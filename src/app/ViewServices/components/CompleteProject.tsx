@@ -4,7 +4,7 @@ const flag = "/img/Flag.svg";
 
 export default function MPage() {
   return (
-    <div className="rounded-xl bg-[#101010] px-[24px] pb-[20px] pt-[40px]">
+    <div className="mx-5 rounded-xl bg-[#101010] px-[24px] pb-[20px] pt-[40px] lg:mx-0">
       <div className="flex flex-col gap-[8px]">
         <div className="flex items-center gap-2">
           <Image src={flag} alt="tech-arsenal" width={20} height={20} />{" "}

@@ -44,6 +44,36 @@ export default function MPage() {
           name: "Blog",
           number: "03",
         },
+        {
+          id: 6,
+          icon: "/img/Agency.svg",
+          name: "Agency",
+          number: "08",
+        },
+        {
+          id: 7,
+          icon: "/img/Fintech.svg",
+          name: "Fintech",
+          number: "03",
+        },
+        {
+          id: 8,
+          icon: "/img/Ecommerce.svg",
+          name: "Ecommerce",
+          number: "02",
+        },
+        {
+          id: 9,
+          icon: "/img/Portfolio.svg",
+          name: "Portfolio",
+          number: "06",
+        },
+        {
+          id: 10,
+          icon: "/img/Blog.svg",
+          name: "Blog",
+          number: "03",
+        },
       ],
     },
     {
@@ -82,12 +112,42 @@ export default function MPage() {
           name: "Restaurant",
           number: "05",
         },
+        {
+          id: 6,
+          icon: "/img/Agency.svg",
+          name: "Agency",
+          number: "08",
+        },
+        {
+          id: 7,
+          icon: "/img/Fintech.svg",
+          name: "Fintech",
+          number: "03",
+        },
+        {
+          id: 8,
+          icon: "/img/Ecommerce.svg",
+          name: "Ecommerce",
+          number: "02",
+        },
+        {
+          id: 9,
+          icon: "/img/Portfolio.svg",
+          name: "Portfolio",
+          number: "06",
+        },
+        {
+          id: 10,
+          icon: "/img/Blog.svg",
+          name: "Blog",
+          number: "03",
+        },
       ],
     },
   ]);
 
   return (
-    <div className="flex w-[1050px] items-center gap-3">
+    <div className="mx-5 grid max-w-[1050px] grid-cols-1 items-center gap-[16px] lg:mx-0 lg:flex xl:gap-[15px]">
       {card.map((item) => (
         <div
           key={item.id}
@@ -125,7 +185,7 @@ export default function MPage() {
                 View Projects
               </Link>
             </div>
-            <div className="w-[470px] rounded-xl bg-[#141414] py-[9px]">
+            <div className="max-w-[1600px] rounded-xl bg-[#141414] py-[9px] lg:max-w-[470px]">
               <Marquee speed={30}>
                 {item.marq?.map((mar) => (
                   <div

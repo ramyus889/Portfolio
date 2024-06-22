@@ -7,7 +7,7 @@ const free = "/img/Freelance.svg";
 
 export default function MPage() {
   return (
-    <div className="rounded-xl bg-[#101010] px-[16px] py-[16px]">
+    <div className="mx-5 rounded-xl bg-[#101010] px-[16px] py-[16px] lg:mx-0">
       <div className="flex flex-col items-center gap-4">
         <div className="flex items-center gap-2 rounded-xl border bg-[#191919] px-[20px] py-[6px]">
           <span className="h-[8px]  w-[8px] rounded-full bg-[#6DD33D]"></span>

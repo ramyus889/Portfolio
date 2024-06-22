@@ -20,7 +20,7 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="flex place-content-center rounded-xl bg-[#101010] px-[129px] py-[80px]">
+    <div className="mx-5 flex place-content-center rounded-xl bg-[#101010] px-[129px] py-[80px] lg:mx-0">
       <div className="flex flex-col items-center gap-2">
         <Image
           src={front}

@@ -35,14 +35,24 @@ export default function MPage() {
       works: "15+",
       rate: "$120",
     },
+    {
+      id: 4,
+      img: "/img/Notion.svg",
+      main: "Notion Partner",
+      text: "For Innovative Notion",
+      year: "2+ Years",
+      works: "10+",
+      rate: "$50",
+      hidde: "hidden",
+    },
   ]);
 
   return (
-    <div className="flex  items-center gap-5">
+    <div className="mx-5 grid grid-cols-1 place-content-center items-center gap-5 sm:grid-cols-2 lg:mx-0 xl:grid-cols-3">
       {card.map((item) => (
         <div
           key={item.id}
-          className="w-[345px] rounded-xl bg-[#101010] px-[30px] py-[30px]"
+          className={`w-full rounded-xl xl:w-[345px] ${item.hidde} bg-[#101010] px-[30px] py-[30px] max-[1280px]:block`}
         >
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
