@@ -19,7 +19,7 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="w-[304px] rounded-xl   bg-[#101010] px-[20px] pt-[20px]">
+    <div className="  1xl:me-0 mx-5 rounded-xl bg-[#101010] px-[20px] pb-[20px] pt-[20px] xl:mx-0  xl:me-5 xl:w-full  xl:max-w-[650px] xxl:w-[304px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Portfolio</div>

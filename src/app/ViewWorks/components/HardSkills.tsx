@@ -33,7 +33,7 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="rounded-xl bg-[#101010]  px-[20px] py-[20px]">
+    <div className=" 1xl:max-w-[370px] 1xl:mx-0 mx-5 rounded-xl  bg-[#101010] px-[20px] py-[20px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Skills} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Skills</div>

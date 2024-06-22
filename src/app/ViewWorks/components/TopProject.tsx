@@ -51,13 +51,13 @@ export default function MPage() {
   ];
 
   return (
-    <div className="rounded-xl bg-[#101010]  px-[24px] py-[20px]">
+    <div className="1xl:mx-0 mx-5  rounded-xl bg-[#101010] px-[24px] py-[20px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Top} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Works</div>
       </div>
       <div className="text-center text-[20px]">My top 6 Projects</div>
-      <div className="mt-[20px] grid grid-cols-3 gap-5">
+      <div className="mt-[20px] grid   grid-cols-3 gap-5">
         {prod.map((item) => (
           <Link
             key={item.id}
@@ -65,10 +65,10 @@ export default function MPage() {
             target="_blank"
             className="rounded-xl bg-[#191919] px-[14px] py-[14px]"
           >
-            <div className="flex flex-col gap-3">
+            <div className="1xl:w-[270px] flex w-[400px] flex-col gap-3">
               <Image
                 src={item.img}
-                className="h-[125px] rounded-xl object-none object-center"
+                className="1xl:w-[270px] h-[125px] w-full rounded-xl object-cover "
                 alt="tech-arsenal"
                 width={270}
                 height={114}

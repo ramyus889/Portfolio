@@ -11,22 +11,26 @@ export default function Home() {
     <div className="  my-[30px] ">
       <div className="flex place-content-center">
         <div className="flex flex-col gap-5">
-          <div className="flex  gap-5">
+          <div className="flex flex-col-reverse gap-5 xxl:flex-row">
             <div className="flex  flex-col gap-5">
               <Statistic />
               <AboutMe />
             </div>
-            <div className="flex gap-5">
+            <div className="1xl:flex-row flex flex-col gap-5">
               <TopProject />
               <HardSkills />
             </div>
           </div>
-          <div className="flex gap-5">
+          <div className="flex flex-col gap-5 xxl:flex-row">
             {" "}
-            <SolutionWorks />
-            <DemoWorks />
-            <Awards />
-            <ChooseMe />
+            <div className="flex flex-col gap-5 xl:flex-row ">
+              <SolutionWorks />
+              <DemoWorks />
+            </div>
+            <div className="flex flex-col gap-5 xl:flex-row ">
+              <Awards />
+              <ChooseMe />
+            </div>
           </div>
         </div>
       </div>

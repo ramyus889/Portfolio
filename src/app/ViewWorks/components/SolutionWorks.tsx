@@ -22,6 +22,12 @@ export default function MPage() {
       imag: "/img/webDev.svg",
       name: "Web Development",
     },
+    {
+      id: 4,
+      imag: "/img/mobileApp.svg",
+      name: "Mobile App Design",
+      hidd: "hidden",
+    },
   ];
   const marq2 = [
     {
@@ -39,9 +45,15 @@ export default function MPage() {
       imag: "/img/WebDesign.svg",
       name: "SEO Optimization",
     },
+    {
+      id: 4,
+      imag: "/img/Webflow.svg",
+      name: "Webflow Development",
+      hidd: "hidden",
+    },
   ];
   return (
-    <div className="w-[464px] rounded-xl   bg-[#101010] pt-[20px]">
+    <div className="1xl:ms-0 mx-5 max-w-[700px] rounded-xl bg-[#101010]  pt-[20px] xl:mx-0 xl:ms-5 xxl:w-[464px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Services</div>

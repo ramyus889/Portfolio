@@ -51,7 +51,7 @@ export default function MPage() {
     },
   ];
   return (
-    <div className="w-[364px] rounded-xl   bg-[#101010] pt-[20px]">
+    <div className="1xl:me-0 mx-5 max-w-[650px] rounded-xl bg-[#101010] pb-[20px] pt-[20px] xl:mx-0 xl:me-5 xxl:w-[364px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Why Me</div>

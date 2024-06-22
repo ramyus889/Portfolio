@@ -19,6 +19,7 @@ const config = {
       md: "768px",
       lg: "1160px",
       xl: "1280px",
+      "1xl": "1380px",
       "2xl": "1536px",
       xxl: "1919px",
     },
