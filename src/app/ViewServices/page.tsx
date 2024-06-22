@@ -9,7 +9,7 @@ import Benefits from "./components/Benefits";
 
 export default function Home() {
   return (
-    <div className="my-[30px]  ">
+    <div className="my-[30px]  overflow-x-hidden">
       <div className="flex place-content-center">
         <div className="flex flex-col gap-5 xxl:flex-row">
           <div className="flex flex-col-reverse gap-5 xxl:flex-row">
