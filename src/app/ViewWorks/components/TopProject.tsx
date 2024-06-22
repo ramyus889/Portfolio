@@ -57,7 +57,7 @@ export default function MPage() {
         <div className="text-[#999987]">My Works</div>
       </div>
       <div className="text-center text-[20px]">My top 6 Projects</div>
-      <div className="mt-[20px] grid   grid-cols-3 gap-5">
+      <div className="mt-[20px] grid grid-cols-1  gap-5 sm:grid-cols-2 md:grid-cols-3">
         {prod.map((item) => (
           <Link
             key={item.id}
@@ -65,7 +65,7 @@ export default function MPage() {
             target="_blank"
             className="rounded-xl bg-[#191919] px-[14px] py-[14px]"
           >
-            <div className="1xl:w-[270px] flex w-[400px] flex-col gap-3">
+            <div className="1xl:w-[270px] flex w-[500px] flex-col gap-3 sm:w-[400px]">
               <Image
                 src={item.img}
                 className="1xl:w-[270px] h-[125px] w-full rounded-xl object-cover "

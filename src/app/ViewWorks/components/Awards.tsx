@@ -33,7 +33,7 @@ export default function MPage() {
         <div className="text-[#999987]">Recognitions</div>
       </div>
       <div className="text-center text-[20px]">Awards & Accolades</div>
-      <div className="mt-[25px] grid grid-cols-3 gap-3">
+      <div className="mt-[25px] grid grid-cols-1 gap-3 sm:grid-cols-3">
         {image.map((item) => (
           <Link
             key={item.name}

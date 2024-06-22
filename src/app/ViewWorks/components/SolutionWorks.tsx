@@ -53,7 +53,7 @@ export default function MPage() {
     },
   ];
   return (
-    <div className="1xl:ms-0 mx-5 max-w-[700px] rounded-xl bg-[#101010]  pt-[20px] xl:mx-0 xl:ms-5 xxl:w-[464px]">
+    <div className="1xl:ms-0 mx-5 hidden w-full max-w-[1250px] rounded-xl bg-[#101010] pt-[20px] xl:mx-0  xl:ms-5 xl:block xl:max-w-[700px]  xxl:w-[464px]">
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Services</div>
@@ -68,7 +68,10 @@ export default function MPage() {
           gradientWidth={100}
         >
           {marq.map((item) => (
-            <div key={item.id} className="mx-1">
+            <div
+              key={item.id}
+              className={`mx-1 min-[1270px]:block ${item.hidd}`}
+            >
               <div className="flex items-center  rounded-xl bg-[#191919] px-[8px] py-[8px] ">
                 <div className="flex items-center gap-2">
                   <div className="rounded-xl bg-[#282828] px-[12px] py-[12px]">
@@ -93,7 +96,10 @@ export default function MPage() {
           gradientWidth={100}
         >
           {marq2.map((item) => (
-            <div key={item.id} className="mx-1">
+            <div
+              key={item.id}
+              className={`mx-1 min-[1270px]:block ${item.hidd}`}
+            >
               <div className="flex items-center  rounded-xl bg-[#191919] px-[8px] py-[8px] ">
                 <div className="flex items-center gap-2">
                   <div className="rounded-xl bg-[#282828] px-[12px] py-[12px]">

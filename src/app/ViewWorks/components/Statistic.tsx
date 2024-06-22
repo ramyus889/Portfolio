@@ -31,7 +31,7 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="1xl:mx-0 mx-5 grid grid-cols-2 gap-3">
+    <div className="1xl:mx-0 mx-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
       {cards.map((card) => (
         <div
           key={card.id}

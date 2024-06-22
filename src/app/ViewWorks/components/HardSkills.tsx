@@ -58,7 +58,7 @@ export default function MPage() {
               </div>
               <div className="text-[#cccccc]">{item.name}</div>
             </div>
-            <div className="rounded-xl bg-[#1f1f1f] px-[10px] py-[6px] text-[#838383]">
+            <div className="hidden rounded-xl bg-[#1f1f1f] px-[10px] py-[6px] text-[#838383] min-[410px]:block">
               {item.mainText}
             </div>
           </div>

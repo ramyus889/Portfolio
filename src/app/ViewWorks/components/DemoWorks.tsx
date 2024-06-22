@@ -50,6 +50,17 @@ export default function MPage() {
             </div>
           </Link>
         ))}
+        <div className="block xl:hidden">
+          <div className="flex place-content-center">
+            <Link
+              showAnchorIcon
+              href={"/ViewServices"}
+              className=" pb-[12px] pt-5 text-[#A18FFB]"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
