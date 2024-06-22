@@ -3,6 +3,7 @@ import { Mooli } from "next/font/google";
 import "./globals.css";
 import "/css/fontStyle.css";
 import "/css/Uiverse.css";
+import NavBar from "./components/NavBar";
 import NavbarNextUi from "../componentsUi/NavbarNextUi";
 const fontStyle = Mooli({ subsets: ["latin"], weight: "400" });
 
@@ -19,6 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning={true}>
       <body className={fontStyle.className}>
+        <div className="block sm:hidden">
+          <NavBar />
+        </div>
         <div className="">{children}</div>
       </body>
     </html>
