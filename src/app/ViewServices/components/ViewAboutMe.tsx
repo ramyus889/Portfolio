@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Link } from "@nextui-org/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const front = "/img/frontend.jpg";
 export default function MPage() {
@@ -20,7 +21,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="mx-5 flex place-content-center items-center rounded-xl bg-[#101010]  py-[80px] lg:mx-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+      className="mx-5 flex place-content-center items-center rounded-xl bg-[#101010]  py-[80px] lg:mx-0"
+    >
       <div className="flex flex-col items-center gap-2">
         <Image
           src={front}
@@ -57,6 +63,6 @@ export default function MPage() {
           About Me
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

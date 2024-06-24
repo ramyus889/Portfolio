@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 const call = "/img/call.svg";
 export default function MPage() {
@@ -16,6 +17,7 @@ export default function MPage() {
       year: "5+ Years",
       works: "30+",
       rate: "$150",
+      delay: 0.6,
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ export default function MPage() {
       year: "4+ Years",
       works: "20+",
       rate: "$100",
+      delay: 0.7,
     },
     {
       id: 3,
@@ -34,6 +37,7 @@ export default function MPage() {
       year: "3+ Years",
       works: "15+",
       rate: "$120",
+      delay: 0.8,
     },
     {
       id: 4,
@@ -44,13 +48,17 @@ export default function MPage() {
       works: "10+",
       rate: "$50",
       hidde: "hidden",
+      delay: 0.9,
     },
   ]);
 
   return (
     <div className="mx-5 grid grid-cols-1 place-content-center items-center gap-5 sm:grid-cols-2 lg:mx-0 xl:grid-cols-3">
       {card.map((item) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: item.delay }}
           key={item.id}
           className={`w-full rounded-xl xl:w-[345px] ${item.hidde} bg-[#101010] px-[30px] py-[30px] max-[1280px]:block`}
         >
@@ -95,7 +103,7 @@ export default function MPage() {
               Schedule Call
             </Button>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

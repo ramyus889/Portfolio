@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Link } from "@nextui-org/link";
+import { motion } from "framer-motion";
 const Work = "/img/Services.svg";
 
 export default function MPage() {
@@ -19,7 +20,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="  1xl:me-0 mx-5 rounded-xl bg-[#101010] px-[20px] pb-[20px] pt-[20px] xl:mx-0  xl:me-5 xl:w-full  xl:max-w-[650px] xxl:w-[304px]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.6 }}
+      className="  mx-5 rounded-xl bg-[#101010] px-[20px] pb-[20px] pt-[20px] xl:mx-0 xl:me-5  xl:w-full xl:max-w-[650px]  1xl:me-0 xxl:w-[304px]"
+    >
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Portfolio</div>
@@ -62,6 +68,6 @@ export default function MPage() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,10 +1,18 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const flag = "/img/Flag.svg";
 
 export default function MPage() {
   return (
-    <div className="mx-5 rounded-xl bg-[#101010] px-[24px] pb-[20px] pt-[40px] lg:mx-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 1.1 }}
+      className="mx-5 rounded-xl bg-[#101010] px-[24px] pb-[20px] pt-[40px] lg:mx-0"
+    >
       <div className="flex flex-col gap-[8px]">
         <div className="flex items-center gap-2">
           <Image src={flag} alt="tech-arsenal" width={20} height={20} />{" "}
@@ -15,6 +23,6 @@ export default function MPage() {
           <span className="text-[40px] text-[#6C60A4]">+</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

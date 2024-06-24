@@ -8,6 +8,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@nextui-org/react";
+import { motion } from "framer-motion";
 const StarDown = "/img/StarDown.svg";
 
 export default function MPage() {
@@ -38,7 +39,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="mx-5 rounded-xl  bg-[#101010] px-[20px] py-[20px] sm:mx-0 ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 1.0 }}
+      className="mx-5 rounded-xl  bg-[#101010] px-[20px] py-[20px] sm:mx-0 "
+    >
       <div className="flex place-content-center items-center gap-1">
         <Image src={StarDown} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Work Process</div>
@@ -76,6 +82,6 @@ export default function MPage() {
           </Popover>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

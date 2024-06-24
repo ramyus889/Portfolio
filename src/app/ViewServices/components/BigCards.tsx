@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 const call = "/img/call.svg";
 export default function MPage() {
@@ -12,6 +13,7 @@ export default function MPage() {
       id: 1,
       img: "/img/code.svg",
       main: "Web Development",
+      delay: 0.4,
       text: "Crafting functional websites with clean code and responsive design to meet client objectives",
       marq: [
         {
@@ -80,6 +82,7 @@ export default function MPage() {
       id: 2,
       img: "/img/pain.svg",
       main: "Web Design",
+      delay: 0.5,
       text: "Creating visually stunning and user-centric designs that reflect brand identity",
       marq: [
         {
@@ -149,7 +152,10 @@ export default function MPage() {
   return (
     <div className="mx-5 grid max-w-[1050px] grid-cols-1 items-center gap-[16px] lg:mx-0 lg:flex xl:gap-[15px]">
       {card.map((item) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: item.delay }}
           key={item.id}
           className="rounded-xl bg-[#101010] px-[30px] py-[30px]"
         >
@@ -210,7 +216,7 @@ export default function MPage() {
               </Marquee>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

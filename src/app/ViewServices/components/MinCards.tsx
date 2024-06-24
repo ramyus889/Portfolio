@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 const call = "/img/call.svg";
 const free = "/img/Freelance.svg";
 
 export default function MPage() {
   return (
-    <div className="mx-5 rounded-xl bg-[#101010] px-[16px] py-[16px] lg:mx-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 1 }}
+      className="mx-5 rounded-xl bg-[#101010] px-[16px] py-[16px] lg:mx-0"
+    >
       <div className="flex flex-col items-center gap-4">
         <div className="flex items-center gap-2 rounded-xl border bg-[#191919] px-[20px] py-[6px]">
           <span className="h-[8px]  w-[8px] rounded-full bg-[#6DD33D]"></span>
@@ -30,6 +38,6 @@ export default function MPage() {
           Schedule Call
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Link } from "@nextui-org/link";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+
 const Work = "/img/Services.svg";
 
 export default function MPage() {
@@ -55,7 +57,12 @@ export default function MPage() {
     },
   ];
   return (
-    <div className="mx-5 rounded-xl bg-[#101010]  pb-[32px] pt-[20px]  sm:mx-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.7 }}
+      className="mx-5 rounded-xl bg-[#101010]  pb-[32px] pt-[20px]  sm:mx-0"
+    >
       <div className="flex place-content-center items-center gap-1">
         <Image src={Work} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Clients</div>
@@ -125,6 +132,6 @@ export default function MPage() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

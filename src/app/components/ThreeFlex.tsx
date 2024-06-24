@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 export default function MPage() {
@@ -23,7 +24,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="px-5 sm:px-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="px-5 sm:px-0"
+    >
       <div className="flex w-full flex-col gap-5 md:flex-row">
         {cards.map((card) => (
           <div
@@ -41,6 +47,6 @@ export default function MPage() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

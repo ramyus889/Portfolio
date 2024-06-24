@@ -1,7 +1,10 @@
+"use client";
+
 import { BiDownload } from "react-icons/bi";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Chip } from "@nextui-org/react";
+import { motion } from "framer-motion";
 const front = "/img/frontend.jpg";
 const Tel = "/img/Telegram.svg";
 const What = "/img/WhatsApp.svg";
@@ -33,7 +36,12 @@ export default function MPage() {
     },
   ];
   return (
-    <div className="mx-5 rounded-xl bg-[#101010] px-[20px] py-[30px] sm:mx-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.6 }}
+      className="mx-5 rounded-xl bg-[#101010] px-[20px] py-[30px] sm:mx-0"
+    >
       <div className="flex flex-col items-center  gap-3 sm:flex-row">
         <Image
           src={front}
@@ -103,6 +111,6 @@ export default function MPage() {
           WhatsApp me
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }

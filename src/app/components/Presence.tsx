@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,7 +28,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className=" mx-5 rounded-xl bg-[#101010]  px-[20px] py-[20px] sm:mx-0 ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.9 }}
+      className=" mx-5 rounded-xl bg-[#101010]  px-[20px] py-[20px] sm:mx-0 "
+    >
       <div className="flex place-content-center items-center gap-1">
         <Image src={Sun} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">Follow Me</div>
@@ -56,6 +62,6 @@ export default function MPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

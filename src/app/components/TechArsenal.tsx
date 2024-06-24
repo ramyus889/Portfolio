@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 const Tech = "/img/TechArsenal.svg";
 
 export default function MPage() {
@@ -29,7 +31,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className="mx-5 rounded-xl bg-[#101010] px-[30px] pb-[36px] pt-[20px] sm:mx-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.1 }}
+      className="mx-5 rounded-xl bg-[#101010] px-[30px] pb-[36px] pt-[20px] sm:mx-0"
+    >
       <div className="flex place-content-center items-center gap-1">
         <Image src={Tech} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Stacks</div>
@@ -61,6 +68,6 @@ export default function MPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

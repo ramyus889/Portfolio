@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 const Skills = "/img/Skills.svg";
 
 export default function MPage() {
@@ -33,7 +34,12 @@ export default function MPage() {
     },
   ]);
   return (
-    <div className=" 1xl:max-w-[370px] 1xl:mx-0 mx-5 rounded-xl  bg-[#101010] px-[20px] py-[20px]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.8 }}
+      className=" mx-5 rounded-xl bg-[#101010] px-[20px]  py-[20px] 1xl:mx-0 1xl:max-w-[370px]"
+    >
       <div className="flex place-content-center items-center gap-1">
         <Image src={Skills} alt="tech-arsenal" width={20} height={20} />
         <div className="text-[#999987]">My Skills</div>
@@ -64,6 +70,6 @@ export default function MPage() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

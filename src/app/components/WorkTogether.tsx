@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 const Mainimg = "/img/Main.svg";
 const Message = "/img/message.svg";
@@ -10,7 +11,12 @@ const Call = "/img/call.svg";
 
 export default function MPage() {
   return (
-    <div className="mx-5 rounded-xl  bg-[#101010] py-[43px] sm:mx-0 xxl:py-[32px] ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 1.1 }}
+      className="mx-5 rounded-xl  bg-[#101010] py-[43px] sm:mx-0 xxl:py-[32px] "
+    >
       <div className="flex flex-col place-content-center items-center gap-1">
         <Image
           src={Mainimg}
@@ -49,6 +55,6 @@ export default function MPage() {
           Schedule a Call
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }
