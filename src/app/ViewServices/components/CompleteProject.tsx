@@ -12,7 +12,7 @@ export default function MPage() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 1.1 }}
-      className="mx-5 rounded-xl bg-[#101010] ps-[24px]  pt-[40px] lg:mx-0"
+      className="mx-5 rounded-t-xl rounded-bl-xl bg-[#101010] ps-[24px]  pt-[40px] lg:mx-0"
     >
       <div className="flex flex-col gap-[8px]">
         <div className="flex items-center gap-2">
