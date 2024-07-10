@@ -37,7 +37,7 @@ export default function MPage() {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 1.2 }}
+      transition={{ delay: 1.1 }}
       className="mx-5 rounded-xl bg-[#101010] px-[20px] py-[20px] lg:mx-0"
     >
       <div className="flex place-content-center items-center gap-1">

@@ -12,7 +12,7 @@ export default function MPage() {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 1.1 }}
+      transition={{ delay: 1.2 }}
       className="mx-5 rounded-t-xl rounded-bl-xl bg-[#101010] ps-[24px]  pt-[40px] lg:mx-0"
     >
       <div className="flex flex-col gap-[4px]">
@@ -29,7 +29,7 @@ export default function MPage() {
             </span>
           </div>
         </div>
-        <div className="my-[10px] text-wrap text-[#727065]">
+        <div className="my-[18px] text-wrap text-[#727065]">
           Completed Projects for 3+ Years
         </div>
         <div className=" w-full xxl:max-w-[300px]">
