@@ -1,10 +1,9 @@
 "use client";
-import Image from "next/image";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Marquee from "react-fast-marquee";
-import { motion } from "framer-motion";
 
 const call = "/img/call.svg";
 export default function MPage() {

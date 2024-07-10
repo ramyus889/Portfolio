@@ -1,14 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@nextui-org/react";
+import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 const Sun = "/img/Sun.svg";
 
 export default function MPage() {
@@ -51,7 +46,7 @@ export default function MPage() {
       </div>
       <div className="text-center text-[20px]">Service Benefits</div>
       <div className="my-3 border border-[#212121]"></div>
-      <div className="mt-7 flex flex-col gap-[15px]">
+      <div className=" flex flex-col gap-[12px]">
         {image.map((item) => (
           <Popover key={item.name} placement="left">
             <PopoverTrigger>

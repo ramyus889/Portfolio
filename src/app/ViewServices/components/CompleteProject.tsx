@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import UseAreaChart from "./UseAreaChart";
 
 const flag = "/img/Flag.svg";
 const chart = "/img/chart.svg";
@@ -14,23 +15,25 @@ export default function MPage() {
       transition={{ delay: 1.1 }}
       className="mx-5 rounded-t-xl rounded-bl-xl bg-[#101010] ps-[24px]  pt-[40px] lg:mx-0"
     >
-      <div className="flex flex-col gap-[8px]">
+      <div className="flex flex-col gap-[4px]">
         <div className="flex items-center gap-2">
           <Image src={flag} alt="tech-arsenal" width={20} height={20} />{" "}
           Completed Projects
         </div>
-        <div className="mt-[15px] flex items-center justify-between gap-5">
-          <div className=" flex items-center bg-gradient-to-b from-gray-300/80 to-black bg-clip-text  text-[64px] font-semibold   text-[#6f6f6f] text-transparent ">
-            56
-            <span className="text-[40px] text-[#6C60A4]">+</span>
+        <div className="me-5 mt-3 border border-[#212121]"></div>
+        <div className="mt-[20px] flex items-center justify-between gap-5">
+          <div className=" flex items-center bg-gradient-to-b from-gray-300/80 to-black bg-clip-text  text-[70px] font-semibold   text-[#6f6f6f] text-transparent xxl:text-[64px] ">
+            50
+            <span className="text-[50px] text-[#6C60A4] xxl:text-[40px]">
+              +
+            </span>
           </div>
-          <Image
-            src={chart}
-            alt="tech-arsenal"
-            className="h-[150px] w-[250px] max-[460px]:h-[100px] max-[400px]:w-[160px] xxl:h-[100px] xxl:w-[200px]"
-            width={200}
-            height={100}
-          />
+        </div>
+        <div className="my-[10px] text-wrap text-[#727065]">
+          Completed Projects for 3+ Years
+        </div>
+        <div className=" w-full xxl:max-w-[300px]">
+          <UseAreaChart />
         </div>
       </div>
     </motion.div>
